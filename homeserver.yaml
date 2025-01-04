@@ -1,0 +1,39 @@
+# Configuration file for Synapse.
+#
+# This is a YAML file: see [1] for a quick introduction. Note in particular
+# that *indentation is important*: all the elements of a list or dictionary
+# should have the same indentation.
+#
+# [1] https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html
+#
+# For more information on how to configure Synapse, including a complete accounting of
+# each option, go to docs/usage/configuration/config_documentation.md or
+# https://element-hq.github.io/synapse/latest/usage/configuration/config_documentation.html
+server_name: "localhost"
+pid_file: /Users/evanrobinson/Documents/luna2/matrix/homeserver.pid
+listeners:
+  - port: 8008
+    tls: false
+    type: http
+    x_forwarded: true
+    bind_addresses: ['::1', '127.0.0.1']
+    resources:
+      - names: [client, federation]
+        compress: false
+database:
+  name: sqlite3
+  args:
+    database: /Users/evanrobinson/Documents/luna2/matrix/homeserver.db
+log_config: "/Users/evanrobinson/Documents/luna2/matrix/localhost.log.config"
+media_store_path: /Users/evanrobinson/Documents/luna2/matrix/media_store
+registration_shared_secret: "s~r_tmp;T2MpcHo4F8kW@98t-k;qcMof1VfuFC4ewUgGJ_HlxF"
+report_stats: false
+macaroon_secret_key: "hZT*KA&F#jgx9gcvRF2qrCmvtc6h-b42^GP-.ryoYHynZWKqmP"
+form_secret: "70a7f+#YQZjAG4xk&7qOvbI@tp-HbkN~I&-4#g^*nh8tKN76:H"
+signing_key_path: "/Users/evanrobinson/Documents/luna2/matrix/localhost.signing.key"
+trusted_key_servers:
+  - server_name: "matrix.org"
+suppress_key_server_warning: true
+log_config: "/Users/evanrobinson/Documents/Luna2/matrix/log_config.yaml"
+
+# vim:ft=yaml
