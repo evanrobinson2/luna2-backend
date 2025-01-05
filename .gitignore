@@ -1,0 +1,38 @@
+# --- Python Bytecode / Cache ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Virtual Environments ---
+venv/
+.venv/
+env/
+
+# --- Environment Variables ---
+.env
+
+# --- Log Files ---
+*.log
+server.log
+homeserver.log
+logs/
+
+# --- Database Files ---
+*.db
+*.sqlite
+*.sqlite3
+db/
+homeserver.db
+homeserver.db-shm
+homeserver.db-wal
+
+# --- OS / Editor Artifacts ---
+.DS_Store
+Thumbs.db
+
+# --- Local Scripts or Shell Files ---
+start.zsh
+
+# Optional: If you use JetBrains or VSCode, exclude their config:
+# .idea/
+# .vscode/
